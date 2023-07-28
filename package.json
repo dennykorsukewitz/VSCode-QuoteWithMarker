@@ -20,11 +20,15 @@
     "url": "https://github.com/sponsors/dennykorsukewitz"
   },
   "keywords": [
-    "Workspace",
-    "workflow"
+    "quote",
+    "codemarker",
+    "marker",
+    "comment",
+    "commentline"
   ],
   "categories": [
-    "Snippets"
+    "Visualization",
+    "Other"
   ],
   "engines": {
     "vscode": "^1.74.0"
