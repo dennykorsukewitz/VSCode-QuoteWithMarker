@@ -13,12 +13,14 @@
 
 | Status |
  | ------ |
-| [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-QuoteWithMarker/1.0.0/dev)](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/compare/1.0.0...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
+| [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-QuoteWithMarker/1.0.1/dev)](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/compare/1.0.1...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
 
 ## Feature
 
-Sometimes you have to mark code. Here is the QuoteWithMarker very helpful.
+Sometimes you have to mark and comment code. Here is the QuoteWithMarker very helpful.
 This function quotes the selected area and adds a custom marker to it.
+This way you can still trace the original code.
+There is also a start and end block for better display when merging.
 
 `QuoteWithMarker` can be very useful especially for patch files.
 
