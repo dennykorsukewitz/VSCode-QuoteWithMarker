@@ -7,7 +7,7 @@ All notable changes to the "QuoteWithMarker" extension will be documented in thi
 ### Maintenance
 
 - Updated README.md
-- Update categories and keywords for Visual Studio Marketplace.
+- Updated categories and keywords for Visual Studio Marketplace.
 
 ## [1.0.0]
 
