@@ -59,6 +59,21 @@ function initQuoteWithMarker(context) {
             lineComment = vscode.workspace.getConfiguration('quoteWithMarker').get('lineComment') || '',
             languageId  = activeEditor.document.languageId;
 
+        let currentTime = new Date()
+
+        // returns the month (from 0 to 11)
+        let month = currentTime.getMonth() + 1;
+
+        // returns the day of the month (from 1 to 31);
+        let day = currentTime.getDate()
+
+        // returns the year (four digits)
+        let year = currentTime.getFullYear();
+
+        codeMarker = codeMarker.replace(/\${year}/g, year);
+        codeMarker = codeMarker.replace(/\${month}/g, month);
+        codeMarker = codeMarker.replace(/\${day}/g, day);
+
         // Get quoteChar from config
         if (lineComment[languageId] && lineComment[languageId].length){
             quoteChar = lineComment[languageId];
