@@ -7,6 +7,7 @@ All notable changes to the "QuoteWithMarker" extension will be documented in thi
 ### Placeholder
 
 The following placeholders have been added for the `quoteWithMarker.codeMarker` setting:
+
 - `${year}`   => current year
 - `${month}`  => current month
 - `${day}`    => current day
