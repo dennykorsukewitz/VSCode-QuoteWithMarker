@@ -52,20 +52,21 @@ function initQuoteWithMarker(context) {
         }
 
         let text = activeEditor.document.getText(selection) || '';
+        let config = vscode.workspace.getConfiguration('quoteWithMarker');
 
         let quoteChar,
             codeMarkerReplace,
-            codeMarker  = vscode.workspace.getConfiguration('quoteWithMarker').get('codeMarker') || 'MyMarker',
-            lineComment = vscode.workspace.getConfiguration('quoteWithMarker').get('lineComment') || '',
-            languageId  = activeEditor.document.languageId;
+            codeMarker = config.codeMarker || 'MyMarker',
+            lineComment = config.lineComment || {},
+            languageId = activeEditor.document.languageId;
 
-        let currentTime = new Date()
+        let currentTime = new Date();
 
         // returns the month (from 0 to 11)
         let month = currentTime.getMonth() + 1;
 
         // returns the day of the month (from 1 to 31);
-        let day = currentTime.getDate()
+        let day = currentTime.getDate();
 
         // returns the year (four digits)
         let year = currentTime.getFullYear();

@@ -2,6 +2,13 @@
 
 All notable changes to the "QuoteWithMarker" extension will be documented in this file.
 
+## [1.0.3]
+
+### Maintenance
+
+- Updated README.md.
+- Tidied code.
+
 ## [1.0.2]
 
 ### Placeholder
@@ -20,7 +27,7 @@ Example:
 
 ### Maintenance
 
-- Updated README.md
+- Updated README.md.
 - Updated categories and keywords for Visual Studio Marketplace.
 
 ## [1.0.0]
