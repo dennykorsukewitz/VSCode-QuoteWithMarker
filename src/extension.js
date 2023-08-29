@@ -28,6 +28,7 @@ function activate(context) {
     //                 console.log('language.id: ' + language.id);
     //                 console.log('language.aliases: ' + language.aliases[0]);
     //                 console.log('lineComment: ' + config.comments.lineComment);
+    //                 console.log('blockComment: ' + config.comments.blockComment);
     //             }
     //         }
     //     }
@@ -42,10 +43,10 @@ function initQuoteWithMarker(context) {
         let activeEditor = vscode.window.activeTextEditor;
         if (!activeEditor) return; // No open text editor.
 
-        // Get current selection
+        // Get current selection.
         let selection = activeEditor.selection;
 
-        // Select current line if nothing is selected
+        // Select current line if nothing is selected.
         if (selection.isEmpty == true) {
             activeEditor.selection = new vscode.Selection(selection.active.line, 0 ,selection.active.line, 99)
             selection = activeEditor.selection;
@@ -54,7 +55,11 @@ function initQuoteWithMarker(context) {
         let text = activeEditor.document.getText(selection) || '';
         let config = vscode.workspace.getConfiguration('quoteWithMarker');
 
-        let quoteChar,
+        let quoteCharStart = '',
+            quoteCharEnd = '',
+            quoteCharStartOrigin = '',
+            quoteCharBlockStart = '',
+            isBlockComment = 0,
             codeMarkerReplace,
             codeMarker = config.codeMarker || 'MyMarker',
             lineComment = config.lineComment || {},
@@ -62,26 +67,33 @@ function initQuoteWithMarker(context) {
 
         let currentTime = new Date();
 
-        // returns the month (from 0 to 11)
+        // Returns the month (from 0 to 11).
         let month = currentTime.getMonth() + 1;
 
-        // returns the day of the month (from 1 to 31);
+        // Returns the day of the month (from 1 to 31).
         let day = currentTime.getDate();
 
-        // returns the year (four digits)
+        // Returns the year (four digits).
         let year = currentTime.getFullYear();
+
+        if (month.toString().length <= 1){
+            month = month.toString().padStart(2, '0')
+        }
+        if (day.toString().length <= 1){
+            day = day.toString().padStart(2, '0')
+        }
 
         codeMarker = codeMarker.replace(/\${year}/g, year);
         codeMarker = codeMarker.replace(/\${month}/g, month);
         codeMarker = codeMarker.replace(/\${day}/g, day);
 
-        // Get quoteChar from config
+        // Get quoteCharStart from config.
         if (lineComment[languageId] && lineComment[languageId].length){
-            quoteChar = lineComment[languageId];
+            quoteCharStart = lineComment[languageId];
         }
 
-        // If no quoteChar is set, try to use the default value of lineComment of the current language config
-        if (quoteChar.length === 0 && languageId){
+        // If no quoteCharStart is set, try to use the default value of lineComment of the current language config.
+        if (quoteCharStart.length === 0 && languageId || quoteCharStart === 'undefined'){
             let extensions    = vscode.extensions.all;
             let languagesData = extensions.filter((extension) => extension.packageJSON.name === languageId);
 
@@ -93,25 +105,52 @@ function initQuoteWithMarker(context) {
 
             try {
                 const config = JSON.parse(content);
-                quoteChar = config.comments.lineComment;
+                if (config.comments.lineComment){
+                    quoteCharStart = config.comments.lineComment;
+                }
+                else if (config.comments.blockComment){
+                    isBlockComment = 1;
+                    quoteCharStart      = config.comments.blockComment[0];
+                    quoteCharEnd        = ' ' + config.comments.blockComment[1];
+                    quoteCharBlockStart = ' ' + config.comments.blockComment[0].substring(1);
+                }
+
             } catch (error) {
                 console.log(error);
             }
         }
 
-        if (!quoteChar) return;
+        if (!quoteCharStart) return;
 
-        codeMarkerReplace = `${quoteChar} ---\n`;
-        codeMarkerReplace += `${quoteChar} ${codeMarker}\n`;
-        codeMarkerReplace += `${quoteChar} ---\n`;
-
-        // Add QuoteChar to every single line.
+        let lineLength = 0;
         text.split(/\r?\n/).forEach(line => {
-            codeMarkerReplace += `${quoteChar} ${line}\n`;
+            if (line.toString().length > lineLength){
+                lineLength = line.toString().length;
+            }
         })
 
+        codeMarkerReplace = `${quoteCharStart} ---${quoteCharEnd}\n`;
+        codeMarkerReplace += `${quoteCharStart} ${codeMarker}${quoteCharEnd}\n`;
+        codeMarkerReplace += `${quoteCharStart} ---${quoteCharEnd}\n`;
+
+        if (isBlockComment) {
+            codeMarkerReplace += `${quoteCharStart}\n`;
+            quoteCharStartOrigin = quoteCharStart;
+            quoteCharStart = quoteCharBlockStart;
+        }
+
+        // Add QuoteCharStart to every single line.
+        text.split(/\r?\n/).forEach(line => {
+            codeMarkerReplace += `${quoteCharStart} ${line}\n`;
+        })
+
+        if (isBlockComment) {
+            codeMarkerReplace += `${quoteCharEnd}\n`;
+            quoteCharStart = quoteCharStartOrigin;
+        }
+
         codeMarkerReplace += `\n${text}`;
-        codeMarkerReplace += `\n\n${quoteChar} ---\n`;
+        codeMarkerReplace += `\n\n${quoteCharStart} ---${quoteCharEnd}\n`;
         text.replace(text, codeMarkerReplace);
 
         // Replace the selection in the editor with CodeMarker.
