@@ -23,8 +23,14 @@
     "quote",
     "codemarker",
     "marker",
+    "markers",
     "comment",
-    "commentline"
+    "commentline",
+    "patch",
+    "patcher",
+    "diff",
+    "compare",
+    "helper"
   ],
   "categories": [
     "Visualization",
