@@ -2,7 +2,7 @@
   "name": "QuoteWithMarker",
   "displayName": "Quote With Marker",
   "description": "This extension quotes the selected area and adds a custom marker to it.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "dennykorsukewitz",
   "icon": "doc/images/icon.png",
   "license": "SEE LICENSE IN LICENSE",

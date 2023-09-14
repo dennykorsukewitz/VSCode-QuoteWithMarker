@@ -2,6 +2,12 @@
 
 All notable changes to the "QuoteWithMarker" extension will be documented in this file.
 
+## [1.1.1]
+
+### Maintenance
+
+- Improved VSCode Marketplace keywords.
+
 ## [1.1.0]
 
 ### Leading zeros
