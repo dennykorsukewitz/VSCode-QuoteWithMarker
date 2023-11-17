@@ -9,7 +9,7 @@ repository:
   homepage: https://dennykorsukewitz.github.io/VSCode-QuoteWithMarker/
 
   # A comma-separated list of topics to set on the repository
-  topics: pages, extension, VisualStudioCode, VSC, Quote, Workflow
+  topics: pages, extension, VisualStudioCode, VSC, quote, workflow, codemarker, marker, markers, comment, commentline, patch, patcher, diff, compare, helper
 
   # Either `true` to make the repository private, or `false` to make it public.
   private: false
