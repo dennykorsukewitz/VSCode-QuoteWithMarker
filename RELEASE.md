@@ -1,3 +1,6 @@
-# [1.1.1]
+# [2.0.0]
 
-Improved VSCode Marketplace keywords.
+- Changed source language to TypeScript.
+- Added esbuild to get Browser Editor support.
+- Refactored code.
+- Added UnitTests workflow.
