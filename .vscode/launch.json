@@ -30,6 +30,19 @@
                 "${workspaceFolder}/out/web/**/*.js"
             ],
             "preLaunchTask": "npm: compile-web"
+        },
+        {
+            "name": "Run Tests",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run test",
+        },
+        {
+            "name": "Debug Current Test File",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run test -- ${fileBasenameNoExtension}",
+            "cwd": "${fileDirname}"
         }
     ]
 }
