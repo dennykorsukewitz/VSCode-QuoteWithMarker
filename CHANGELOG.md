@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed to reusable.release.vscode.yml.
 - Keep a changelog.
+- Updated icon.
 
 ## [2.0.0] - 2024-02-05
 

@@ -4,3 +4,4 @@
 
 - Changed to reusable.release.vscode.yml.
 - Keep a changelog.
+- Updated icon.
