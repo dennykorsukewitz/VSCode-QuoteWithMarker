@@ -2,63 +2,50 @@
 
 All notable changes to the "QuoteWithMarker" extension will be documented in this file.
 
-## [2.0.0]
+## [2.0.0] - 2024-02-05
 
-### Refactoring
+### Changed
 
 - Changed source language to TypeScript.
 - Added esbuild to get Browser Editor support.
 - Refactored code.
 - Added UnitTests workflow.
 
-## [1.1.1]
+## [1.1.1] - 2023-09-14
 
-### Maintenance
+### Changed
 
 - Improved VSCode Marketplace keywords.
 
-## [1.1.0]
+## [1.1.0] - 2023-08-29
 
-### Leading zeros
+### Added
 
-Added leading zeros to month and day to always get the same date format.
+- Added leading zeros to month and day to always get the same date format.
+- Some languages do not have line comments, such as CSS. But, they have the possibility to comment out a code block (blockComment). Now the QuoteWithMarker can be used in these languages as well.
 
-### blockComment
+## [1.0.3] - 2023-08-14
 
-Some languages do not have line comments, such as CSS.
-But, they have the possibility to comment out a code block (blockComment).
-Now the QuoteWithMarker can be used in these languages as well.
-
-## [1.0.3]
-
-### Maintenance
+### Changed
 
 - Updated README.md.
 - Tidied code.
 
-## [1.0.2]
+## [1.0.2] - 2023-08-08
 
-### Placeholder
+### Added
 
-The following placeholders have been added for the `quoteWithMarker.codeMarker` setting:
+- Placeholder - The following placeholders have been added for the `quoteWithMarker.codeMarker` setting:
 
-- `${year}`   => current year
-- `${month}`  => current month
-- `${day}`    => current day
+## [1.0.1] - 2023-08-08
 
-Example:
-
-`MyMarker - Copyright (C) 2012-${year} Denny Korsukéwitz, https://dennykorsukewitz.github.io/`
-
-## [1.0.1]
-
-### Maintenance
+### Changed
 
 - Updated README.md.
 - Updated categories and keywords for Visual Studio Marketplace.
 
-## [1.0.0]
+## [1.0.0] - 2023-07-27
 
-### Initial release of QuoteWithMarker extension
+### Added
 
-**QuoteWithMarker** is an extension that quotes the selected area and adds a custom marker to it.
+- `QuoteWithMarker` is an extension that quotes the selected area and adds a custom marker to it.
