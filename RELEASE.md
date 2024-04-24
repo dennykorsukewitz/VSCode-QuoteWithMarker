@@ -1,8 +1,6 @@
-# [2.0.0]
+# [2.0.1] - 2024-04-24
 
-## Refactoring
+## Changed
 
-- Changed source language to TypeScript.
-- Added esbuild to get Browser Editor support.
-- Refactored code.
-- Added UnitTests workflow.
+- Changed to reusable.release.vscode.yml.
+- Keep a changelog.
