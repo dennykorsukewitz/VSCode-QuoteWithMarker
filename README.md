@@ -1,19 +1,19 @@
-<img align="right" width="150" height="150" src="doc/images/icon.png">
-
 # QuoteWithMarker
+
+<img align="right" width="150" height="150" src="doc/images/icon.png" alt="Quote With Marker extension icon">
 
 **QuoteWithMarker** is an extension that quotes the selected area and adds a custom marker to it.
 
-| Repository                                                                                                                                | GitHub                                                                                                                                                                                                                                                    | Visual Studio Marketplace                                                                                                                                                                                                                                            |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![GitHub release (latest by date)](https://img.shields.io/github/v/release/dennykorsukewitz/VSCode-QuoteWithMarker)                       | ![GitHub open issues](https://img.shields.io/github/issues/dennykorsukewitz/VSCode-QuoteWithMarker) ![GitHub closed issues](https://img.shields.io/github/issues-closed/dennykorsukewitz/VSCode-QuoteWithMarker?color=#44CC44)                            | ![Visual Studio Marketplace last-updated](https://img.shields.io/visual-studio-marketplace/last-updated/dennykorsukewitz.QuoteWithMarker) ![Visual Studio Marketplace Version ](https://img.shields.io/visual-studio-marketplace/v/dennykorsukewitz.QuoteWithMarker) |
-| ![GitHub license](https://img.shields.io/github/license/dennykorsukewitz/VSCode-QuoteWithMarker)                                          | ![GitHub pull requests](https://img.shields.io/github/issues-pr/dennykorsukewitz/VSCode-QuoteWithMarker?label=PR) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/dennykorsukewitz/VSCode-QuoteWithMarker?color=g&label=PR) | ![Visual Studio Marketplace Rating release-date](https://img.shields.io/visual-studio-marketplace/release-date/dennykorsukewitz.QuoteWithMarker)                                                                                                                     |
-| ![GitHub language count](https://img.shields.io/github/languages/count/dennykorsukewitz/VSCode-QuoteWithMarker?style=flat&label=language) | ![GitHub contributors](https://img.shields.io/github/contributors/dennykorsukewitz/VSCode-QuoteWithMarker)                                                                                                                                                | ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/dennykorsukewitz.QuoteWithMarker) ![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/dennykorsukewitz.QuoteWithMarker)        |
-| ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dennykorsukewitz/VSCode-QuoteWithMarker)                   | ![GitHub downloads](https://img.shields.io/github/downloads/dennykorsukewitz/VSCode-QuoteWithMarker/total?style=flat)                                                                                                                                     | ![VSC marketplace download](https://img.shields.io/visual-studio-marketplace/d/dennykorsukewitz.QuoteWithMarker) ![VSC marketplace install](https://img.shields.io/visual-studio-marketplace/i/dennykorsukewitz.QuoteWithMarker)                                     |
+|Repository|GitHub|Visual Studio Marketplace|
+|---|---|---|
+|![GitHub release (latest by date)](https://img.shields.io/github/v/release/dennykorsukewitz/VSCode-QuoteWithMarker)|![GitHub open issues](https://img.shields.io/github/issues/dennykorsukewitz/VSCode-QuoteWithMarker) ![GitHub closed issues](https://img.shields.io/github/issues-closed/dennykorsukewitz/VSCode-QuoteWithMarker?color=#44CC44)|![Visual Studio Marketplace last-updated](https://img.shields.io/visual-studio-marketplace/last-updated/dennykorsukewitz.QuoteWithMarker) ![Visual Studio Marketplace Version ](https://img.shields.io/visual-studio-marketplace/v/dennykorsukewitz.QuoteWithMarker)|
+|![GitHub license](https://img.shields.io/github/license/dennykorsukewitz/VSCode-QuoteWithMarker)|![GitHub pull requests](https://img.shields.io/github/issues-pr/dennykorsukewitz/VSCode-QuoteWithMarker?label=PR) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/dennykorsukewitz/VSCode-QuoteWithMarker?color=g&label=PR)|![Visual Studio Marketplace Rating release-date](https://img.shields.io/visual-studio-marketplace/release-date/dennykorsukewitz.QuoteWithMarker)|
+|![GitHub language count](https://img.shields.io/github/languages/count/dennykorsukewitz/VSCode-QuoteWithMarker?style=flat&label=language)|![GitHub contributors](https://img.shields.io/github/contributors/dennykorsukewitz/VSCode-QuoteWithMarker)|![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/dennykorsukewitz.QuoteWithMarker) ![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/dennykorsukewitz.QuoteWithMarker)|
+|![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dennykorsukewitz/VSCode-QuoteWithMarker)|![GitHub downloads](https://img.shields.io/github/downloads/dennykorsukewitz/VSCode-QuoteWithMarker/total?style=flat)|![VSC marketplace download](https://img.shields.io/visual-studio-marketplace/d/dennykorsukewitz.QuoteWithMarker) ![VSC marketplace install](https://img.shields.io/visual-studio-marketplace/i/dennykorsukewitz.QuoteWithMarker)|
 
-| Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-QuoteWithMarker/2.0.2/dev)](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/compare/2.0.2...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow UnitTest](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/unittest.yml/badge.svg?branch=dev&style=flat&label=UnitTest) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages) |
+|Status|
+|---|
+|[![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-QuoteWithMarker/2.0.2/dev)](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/compare/2.0.2...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow UnitTest](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/unittest.yml/badge.svg?branch=dev&style=flat&label=UnitTest) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages)|
 
 ## Feature
 
@@ -34,7 +34,7 @@ There is also a start and end block for better display when merging.
 | ----------------------- | ----------- |
 | bat                     | @REM        |
 | clojure                 | ;;          |
-| coffeescript            | #           |
+| CoffeeScript            | #           |
 | c                       | //          |
 | cpp                     | //          |
 | cuda-cpp                | //          |
@@ -42,7 +42,7 @@ There is also a start and end block for better display when merging.
 | CSS                     |             |
 | dart                    | //          |
 | diff                    | #           |
-| dockerfile              | #           |
+| Dockerfile              | #           |
 | fsharp                  | //          |
 | git-commit              | #           |
 | git-rebase              | #           |
@@ -54,28 +54,28 @@ There is also a start and end block for better display when merging.
 | HTML                    |             |
 | ini                     | ;           |
 | plaintext               | #           |
-| java                    | //          |
+| Java                    | //          |
 | javascriptreact         | //          |
 | JavaScript              | //          |
 | jsx-tags                |             |
-| json                    | //          |
+| JSON                    | //          |
 | jsonc                   | //          |
 | jsonl                   | //          |
 | julia                   | #           |
 | tex                     | %           |
-| latex                   | %           |
+| LaTeX                   | %           |
 | cpp_embedded_latex      | //          |
 | markdown_latex_combined |             |
 | less                    | //          |
 | lua                     | --          |
-| makefile                | #           |
+| Makefile                | #           |
 | Markdown                |             |
 | objective-c             | //          |
 | objective-cpp           | //          |
 | perl                    | #           |
 | perl6                   | #           |
 | php                     | //          |
-| powershell              | #           |
+| PowerShell              | #           |
 | jade                    | //-         |
 | python                  | #           |
 | r                       | #           |
@@ -86,15 +86,15 @@ There is also a start and end block for better display when merging.
 | SCSS                    | //          |
 | shaderlab               | //          |
 | shellscript             | #           |
-| sql                     | --          |
+| SQL                     | --          |
 | swift                   | //          |
 | TypeScript              | //          |
 | typescriptreact         | //          |
 | vb                      | '           |
-| xml                     |             |
+| XML                     |             |
 | xsl                     |             |
 | dockercompose           | #           |
-| yaml                    | #           |
+| YAML                    | #           |
 
 </details>
 
@@ -133,7 +133,7 @@ Download latest [vsix file](https://github.com/dennykorsukewitz/VSCode-QuoteWith
 
 ### 3. Source code
 
-Download archive with the latest [release](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/releases) and unpack it to VisualStudioCode extensions folder
+Download archive with the latest [release](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/releases) and unpack it to Visual Studio Code extensions folder
 `$HOME/.vscode/extensions/`.
 
 ---

@@ -1,34 +1,11 @@
 ---
 name: UnitTest
 
-# Controls when the action will run.
 on:
   push:
   pull_request:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   UnitTest:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-        # os: [ubuntu-latest, macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 16.x
-      - name: Install dependencies
-        run: npm i
-
-      - if: runner.os == 'MacOS'
-        run: |
-          npm run test
-
-      - if: runner.os == 'Linux'
-        run: xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' npm run test
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.unittest.vscode.yml@dev

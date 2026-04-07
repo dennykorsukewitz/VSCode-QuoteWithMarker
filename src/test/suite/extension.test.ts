@@ -1,6 +1,14 @@
 import * as assert from 'assert';
 import * as vscode from 'vscode';
 
+function normalizeEol(text: string): string {
+    return text.replace(/\r\n/g, '\n');
+}
+
+function delay(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 suite('Extension Test Suite', function() {
 
     vscode.window.showInformationMessage('Start all tests.');
@@ -76,11 +84,12 @@ suite('Extension Test Suite', function() {
 
         // Execute the command
         await vscode.commands.executeCommand('quoteWithMarker');
+        await delay(1000);
 
         // Get the entire text from the document
         let entireText = editor.document.getText();
 
-         // Get the code marker from the settings
+        // Get the code marker from the settings
         let codeMarker : string | undefined = vscode.workspace.getConfiguration().get('quoteWithMarker.codeMarker') || 'MyMarker';
 
         let currentTime = new Date();
@@ -107,8 +116,7 @@ suite('Extension Test Suite', function() {
         // Expected text
         const expectedText = `# ---\n# ${codeMarker}\n# ---\n# \n\n\n\n# ---\n`;
 
-        // Check the result
-        assert.strictEqual(entireText, expectedText);
+        assert.strictEqual(normalizeEol(entireText), expectedText);
 
     });
 
@@ -192,13 +200,12 @@ suite('Extension Test Suite', function() {
 
         // Execute the command
         await vscode.commands.executeCommand('quoteWithMarker');
-
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await delay(1000);
 
         // Get the entire text from the document
         let entireText = editor.document.getText();
 
-         // Get the code marker from the settings
+        // Get the code marker from the settings
         let codeMarker : string | undefined = vscode.workspace.getConfiguration().get('quoteWithMarker.codeMarker') || 'MyMarker';
 
         let currentTime = new Date();
@@ -234,8 +241,7 @@ Hello World!
 # ---
 `;
 
-        // Check the result
-        assert.strictEqual(entireText, expectedText);
+        assert.strictEqual(normalizeEol(entireText), expectedText);
     });
 
 });
