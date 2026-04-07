@@ -13,7 +13,7 @@
 
 |Status|
 |---|
-|[![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-QuoteWithMarker/2.0.2/dev)](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/compare/2.0.2...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow UnitTest](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/unittest.yml/badge.svg?branch=dev&style=flat&label=UnitTest) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages)|
+|[![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/VSCode-QuoteWithMarker/2.1.0/dev)](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/compare/2.1.0...dev) ![GitHub Workflow Lint](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/lint.yml/badge.svg?branch=dev&style=flat&label=Lint) ![GitHub Workflow UnitTest](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/unittest.yml/badge.svg?branch=dev&style=flat&label=UnitTest) ![GitHub Workflow Pages](https://github.com/dennykorsukewitz/VSCode-QuoteWithMarker/actions/workflows/pages.yml/badge.svg?branch=dev&style=flat&label=GitHub%20Pages)|
 
 ## Feature
 
@@ -38,7 +38,7 @@ Open the palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and search for **QuoteWithMark
 
 1. **Quick Pick** — Choose a starting value:
    - **Current marker** — The value from your settings (bookmark icon).
-   - **Workspace folder** — The folder name of the open workspace (handy as a short repo label).
+   - **Workspace folder** — The folder name of the open workspace (handy as a short repository label).
    - **Recently used** — Previously chosen or used markers (stored in the extension; shared across windows).
    - **New…** — Start from the current setting and edit in the next step.
 2. **Input box** — Adjust the string (e.g. add or change `${year}`, `${month}`, `${day}`). If the text does not yet contain `${year}`, the extension offers a default suffix ` - ${year}.${month}.${day}` (same idea as the built-in default). Confirm to save.

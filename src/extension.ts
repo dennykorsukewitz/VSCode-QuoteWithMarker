@@ -255,7 +255,7 @@ async function pickAndSetCodeMarker(context: vscode.ExtensionContext): Promise<v
     if (folderName) {
         items.push({
             label: folderName,
-            description: 'Workspace folder (repo name)',
+            description: 'Workspace folder (repository name)',
         });
         seen.add(folderName);
     }
