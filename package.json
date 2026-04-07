@@ -80,6 +80,11 @@
         "command": "quoteWithMarker",
         "title": "Quote with Marker.",
         "category": "QuoteWithMarker"
+      },
+      {
+        "command": "quoteWithMarkerFrame",
+        "title": "Insert marker frame only.",
+        "category": "QuoteWithMarker"
       }
     ],
     "keybindings": [
