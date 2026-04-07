@@ -24,8 +24,26 @@ There is also a start and end block for better display when merging.
 
 `QuoteWithMarker` can be very useful especially for patch files.
 
-**Shortcut:** ```strg + alt + k, q```<br>
-**Command:**  ```QuoteWithMarker: Quote with Marker.```
+**Shortcut (quote):** `Ctrl+Alt+K` then `Q` (Windows/Linux) — see keybindings in the extension.
+
+### Commands (Command Palette)
+
+Open the palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and search for **QuoteWithMarker**:
+
+- **Quote with Marker.** — Quotes the selection (or current line) and inserts the marker block; the original text is included once as comments and once plain (for patch-style workflows).
+- **Insert marker frame only.** — Inserts only the header/footer marker block and a small note area, without duplicating the selection body.
+- **Set code marker…** — Change `quoteWithMarker.codeMarker` without opening Settings.
+
+#### Set code marker…
+
+1. **Quick Pick** — Choose a starting value:
+   - **Current marker** — The value from your settings (bookmark icon).
+   - **Workspace folder** — The folder name of the open workspace (handy as a short repo label).
+   - **Recently used** — Previously chosen or used markers (stored in the extension; shared across windows).
+   - **New…** — Start from the current setting and edit in the next step.
+2. **Input box** — Adjust the string (e.g. add or change `${year}`, `${month}`, `${day}`). If the text does not yet contain `${year}`, the extension offers a default suffix ` - ${year}.${month}.${day}` (same idea as the built-in default). Confirm to save.
+
+The setting is written to **workspace** settings when a folder is open, otherwise to **user** settings. Using **Quote with Marker** or **Insert marker frame only** also refreshes the **recent markers** list (using the template before date substitution).
 
 <details>
   <summary>Works for the following languages:</summary>
@@ -106,10 +124,10 @@ There is also a start and end block for better display when merging.
 
 `Preferences -> Settings -> Extensions -> QuoteWithMarker`
 
-| Name                        | Description                                                      | Default Value              |
-| --------------------------- | ---------------------------------------------------------------- | -------------------------- |
-| quoteWithMarker.codeMarker  | Code Marker used in QuoteWithMarker function.                    | MyMarker                   |
-| quoteWithMarker.lineComment | This is a mapping between LanguageID and lineComment characters. | All possible lineComment's |
+| Name                        | Description                                                      | Default Value                      |
+| --------------------------- | ---------------------------------------------------------------- | ---------------------------------- |
+| quoteWithMarker.codeMarker  | Code Marker used in QuoteWithMarker function.                    | MyMarker - ${year}.${month}.${day} |
+| quoteWithMarker.lineComment | This is a mapping between LanguageID and lineComment characters. | All possible lineComment's         |
 
 ![Settings](doc/images/settings.png)
 

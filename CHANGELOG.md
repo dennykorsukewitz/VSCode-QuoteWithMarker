@@ -2,8 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [2.1.0] - 2026-04-07
+
+### Added
+
+- Command **Insert marker frame only** (`quoteWithMarkerFrame`): inserts the marker header/footer without quoting the selection twice or appending a second raw copy (useful for short review notes).
+- Command **Set code marker…** (`quoteWithMarker.setCodeMarker`): change `quoteWithMarker.codeMarker` from the Command Palette via a quick pick (current marker, workspace folder name, recently used values, or **New…**) and an input step; recent markers are persisted in extension global state; date suffix ` - ${year}.${month}.${day}` is suggested when the template has no `${year}` yet.
+
 
 ## [2.0.2] - 2024-04-25
 

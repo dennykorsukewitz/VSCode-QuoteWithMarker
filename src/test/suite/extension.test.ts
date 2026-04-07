@@ -44,6 +44,10 @@ suite('Extension Test Suite', function() {
             commands.includes('quoteWithMarkerFrame'),
             'quoteWithMarkerFrame should be registered',
         );
+        assert.ok(
+            commands.includes('quoteWithMarker.setCodeMarker'),
+            'quoteWithMarker.setCodeMarker should be registered',
+        );
     });
 
     test('quoteWithMarker configuration is readable', async () => {
