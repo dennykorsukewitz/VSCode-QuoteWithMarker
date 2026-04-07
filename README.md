@@ -41,7 +41,7 @@ Open the palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and search for **QuoteWithMark
    - **Workspace folder** — The folder name of the open workspace (handy as a short repository label).
    - **Recently used** — Previously chosen or used markers (stored in the extension; shared across windows).
    - **New…** — Start from the current setting and edit in the next step.
-2. **Input box** — Adjust the string (e.g. add or change `${year}`, `${month}`, `${day}`). If the text does not yet contain `${year}`, the extension offers a default suffix ` - ${year}.${month}.${day}` (same idea as the built-in default). Confirm to save.
+2. **Input box** — Adjust the string (e.g. add or change `${year}`, `${month}`, `${day}`). If the text does not yet contain `${year}`, the extension offers a default suffix: a space, hyphen, space, and `${year}.${month}.${day}` (same idea as the built-in default). Confirm to save.
 
 The setting is written to **workspace** settings when a folder is open, otherwise to **user** settings. Using **Quote with Marker** or **Insert marker frame only** also refreshes the **recent markers** list (using the template before date substitution).
 
